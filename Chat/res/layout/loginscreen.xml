@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackgrounddarkv2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+	 >
+
+    <Button
+        android:id="@+id/OKbutton"
+        android:layout_width="365dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/loginbutton" />
+
+    <EditText
+        android:id="@+id/chatid"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/OKbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:hint="Enter login name" />
+
+</RelativeLayout>

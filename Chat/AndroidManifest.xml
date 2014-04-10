@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+  
+    <application 
+        android:label="@string/app_name" 
+        android:debuggable="true" android:icon="@drawable/hoptalk_icon_64">
+        
+         <activity android:name="com.example.chat.StartingBackground"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.example.chat.Login"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+	<activity
+            android:name="com.example.chat.Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+	<activity
+            android:name="com.example.chat.newMessageFwd"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.newMessageFwd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.chat.OnlineUsers"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.OnlineUsers" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.chat.BroadcastChat"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.BroadcastChat" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:name="com.example.chat.DiscoverPeers"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.DiscoverPeers" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.chat.ContactList"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.ContactList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                <activity
+            android:name="com.example.chat.MsgForward"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.chat.MsgForward" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name=".UsersDiscoveryService"></service>
+        <service android:name="com.example.chat.RoutingService"> </service>
+    </application>
+
+
+
+
+</manifest> 
